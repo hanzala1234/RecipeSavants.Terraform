@@ -5,7 +5,7 @@ metadata:
   namespace: ingress-basic
 spec:
   acme:
-    server: https://acme-prod-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     email: robert@recipesavants.com
     privateKeySecretRef:
       name: letsencrypt-prod
