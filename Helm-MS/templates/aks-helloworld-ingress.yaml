@@ -13,7 +13,7 @@ spec:
     secretName: tls-secret
   rules:
   - host: recipesavants-efk-ingress.centralus.cloudapp.azure.com
-  - http:
+    http:
       paths:
       - path: /
         backend:
