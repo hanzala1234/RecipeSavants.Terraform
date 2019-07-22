@@ -9,7 +9,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - micro.recipesavants.com
+    - recipesavants-efk-ingress.centralus.cloudapp.azure.com
     secretName: tls-secret
   rules:
   - http:
