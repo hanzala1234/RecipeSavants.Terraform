@@ -12,8 +12,7 @@ spec:
     - recipesavants-efk-ingress.centralus.cloudapp.azure.com
     secretName: tls-secret
   rules:
-  - host: 
-    - recipesavants-efk-ingress.centralus.cloudapp.azure.com
+  - host: recipesavants-efk-ingress.centralus.cloudapp.azure.com
     http:
       paths:
       - path: /
