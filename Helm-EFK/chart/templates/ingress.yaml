@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  tls:
+  - hosts:
+    - recipesavants-efk-ingress.centralus.cloudapp.azure.com
+    secretName: tls-secret
+  rules:
+  - host: recipesavants-efk-ingress.centralus.cloudapp.azure.com
+    http:
+      paths:
+      - path: /elastic(.*)
+        backend:
+          serviceName: {{.Release.Name}}-elasticsearch-client
+          servicePort: 9200
+      - path: /(.*)
+        backend:
+           serviceName: {{.Release.Name}}-kibana
+           servicePort: 5601
+      - path: /redis(.*)
+        backend:
+           serviceName: {{.Release.Name}}-redis-master
+           servicePort: 6379
+      - path: /fluentd(.*)
+        backend:
+           serviceName: {{.Release.Name}}-fluentd
+           servicePort: 24220

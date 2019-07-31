@@ -1,0 +1,11 @@
+#elasticsearch.serviceNameOverride: elasticsearch
+elastic-stack:
+      fluentd:
+              enabled: true
+      logstash:
+         enabled: false        
+      kibana:
+         
+         env:
+              ELASTICSEARCH_HOSTS: http://{{ .Release.Name }}-elasticsearch-client:9200
+         

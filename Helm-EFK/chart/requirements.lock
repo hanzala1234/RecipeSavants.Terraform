@@ -1,0 +1,9 @@
+dependencies:
+- name: redis
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 8.0.18
+- name: etcd
+  repository: https://charts.bitnami.com/bitnami
+  version: 4.1.0
+digest: sha256:c868ef5cdbcbae70b2f0df4b873b39bf365a3672601bc6b9555e666e4182f7ab
+generated: 2019-07-25T19:30:48.952050691+05:00

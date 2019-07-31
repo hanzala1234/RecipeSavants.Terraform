@@ -1,0 +1,22 @@
+dependencies:
+        #- name: elasticsearch
+   #version: ^1.22.0
+   #repository: https://kubernetes-charts.storage.googleapis.com/
+   # condition: elasticsearch.enabled
+   # - name: elastic-stack
+    # version: 1.8.0
+    # repository: https://kubernetes-charts.storage.googleapis.com/
+    #   condition: kibana.enabled,elasticsearch.enabled,fluentd.enabled
+  - name: redis
+    version: 8.0.18
+    repository: https://kubernetes-charts.storage.googleapis.com/
+  
+  - name: etcd
+    version: 4.1.0
+    repository: https://charts.bitnami.com/bitnami
+   
+    # - name: kibana
+
+   # version: 7.2.1-0
+
+   #repository: https://helm.elastic.co
